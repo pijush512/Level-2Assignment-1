@@ -31,3 +31,11 @@ const formatCoordinate = (coordinate: readonly[number, number, string]) => {
     const [latitude, longitude, locationName] = coordinate;
     return `Location: ${locationName} (${latitude}, ${longitude})`;
 };
+
+
+const concatenateArrays = <T>(...arrays: T[][]) => {
+    return arrays.flat() as T[];
+};
+
+
+

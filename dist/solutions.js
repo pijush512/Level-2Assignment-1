@@ -27,5 +27,8 @@ const formatCoordinate = (coordinate) => {
     const [latitude, longitude, locationName] = coordinate;
     return `Location: ${locationName} (${latitude}, ${longitude})`;
 };
+const concatenateArrays = (...arrays) => {
+    return arrays.flat();
+};
 export {};
 //# sourceMappingURL=solutions.js.map
