@@ -23,5 +23,9 @@ const processInput = (value) => {
     }
     return "";
 };
+const formatCoordinate = (coordinate) => {
+    const [latitude, longitude, locationName] = coordinate;
+    return `Location: ${locationName} (${latitude}, ${longitude})`;
+};
 export {};
 //# sourceMappingURL=solutions.js.map
