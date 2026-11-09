@@ -71,6 +71,17 @@ class Manager extends Employee {
         return `Manager of ${this.department}: ${this.name}`;
     }
 }
-const manager = new Manager("Alice", 50000, "Engineering");
+const validateAgeAsync = (age) => {
+    return new Promise((resolve, reject) => {
+        if (age >= 18) {
+            setTimeout(() => {
+                resolve("Access Granted");
+            }, 1000);
+        }
+        else {
+            reject(new Error("Access Denied: Must be 18 or older"));
+        }
+    });
+};
 export {};
 //# sourceMappingURL=solutions.js.map

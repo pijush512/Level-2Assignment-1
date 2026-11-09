@@ -26,29 +26,41 @@
 // ];
 // console.log(pluckValues(users, "name")); 
 // console.log(pluckValues(users, "id"));
-class Employee {
-    name;
-    baseSalary;
-    constructor(name, baseSalary) {
-        this.name = name;
-        this.baseSalary = baseSalary;
-    }
-    getDetails() {
-        return `Employee: ${this.name}, Base Salary: ${this.baseSalary}`;
-    }
-}
-class Manager extends Employee {
-    department;
-    constructor(name, baseSalary, department) {
-        super(name, baseSalary);
-        this.department = department;
-    }
-    getRoleInfo() {
-        return `Manager of ${this.department}: ${this.name}`;
-    }
-}
-const manager = new Manager("Alice", 50000, "Engineering");
-console.log(manager.getDetails());
-console.log(manager.getRoleInfo());
+// class Employee {
+//     protected name: string;
+//     private baseSalary: number;
+//     constructor(name: string, baseSalary: number) {
+//         this.name = name;
+//         this.baseSalary = baseSalary;
+//     }
+//     getDetails(): string {
+//         return `Employee: ${this.name}, Base Salary: ${this.baseSalary}`;
+//     }
+// }
+// class Manager extends Employee {
+//     private department: string;
+//     constructor(name: string, baseSalary: number, department: string) {
+//         super(name, baseSalary);
+//         this.department = department;
+//     }
+//     getRoleInfo(): string {
+//         return `Manager of ${this.department}: ${this.name}`;
+//     }
+// }
+// const manager = new Manager("Alice", 50000, "Engineering");
+// console.log(manager.getDetails());    
+// console.log(manager.getRoleInfo());  
+const validateAgeAsync = (age) => {
+    return new Promise((resolve, reject) => {
+        if (age >= 18) {
+            setTimeout(() => {
+                resolve("Access Granted");
+            }, 1000);
+        }
+        else {
+            reject(new Error("Access Denied: Must be 18 or older"));
+        }
+    });
+};
 export {};
 //# sourceMappingURL=problem-5.js.map
