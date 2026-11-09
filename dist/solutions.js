@@ -42,5 +42,13 @@ const courses = [
     { title: "Basic HTML", students: 45, isPublished: true },
     { title: "Next.js Pro", students: 85, isPublished: true }
 ];
+const pluckValues = (items, key) => {
+    return items.map(item => item[key]);
+};
+const users = [
+    { id: 1, name: "Rakib", role: "Admin" },
+    { id: 2, name: "Sadia", role: "Editor" },
+    { id: 3, name: "Tariq", role: "Subscriber" }
+];
 export {};
 //# sourceMappingURL=solutions.js.map
